@@ -22,4 +22,3 @@ The following guides illustrate how to use some features concretely:
 
 ### Authors
 Incubadora - invillia.com
-Aline ribeiro braga
