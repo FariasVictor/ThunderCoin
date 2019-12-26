@@ -2,6 +2,7 @@ package com.invillia.ThunderCoin.mapper;
 
 import com.invillia.ThunderCoin.domain.User;
 import com.invillia.ThunderCoin.domain.request.UserSaveRequest;
+import com.invillia.ThunderCoin.domain.request.UserUpdateRequest;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -19,4 +20,9 @@ public class UserMapper {
         return user;
     }
 
+    public void updateUserByUserUpdateRequest(User user, UserUpdateRequest userUpdateRequest) {
+
+        user.setName(userUpdateRequest.getName());
+        user.setBalance(userUpdateRequest.getBalance());
+    }
 }
