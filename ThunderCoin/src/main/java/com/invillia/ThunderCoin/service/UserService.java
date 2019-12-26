@@ -3,6 +3,7 @@ package com.invillia.ThunderCoin.service;
 import com.invillia.ThunderCoin.domain.User;
 import com.invillia.ThunderCoin.domain.request.UserSaveRequest;
 import com.invillia.ThunderCoin.domain.request.UserUpdateRequest;
+import com.invillia.ThunderCoin.domain.response.UserResponse;
 import com.invillia.ThunderCoin.exception.UserNotFoundByEmployeeIdException;
 import com.invillia.ThunderCoin.exception.UserWithEmployeeIdAlreadyExistsException;
 import com.invillia.ThunderCoin.mapper.UserMapper;
@@ -11,7 +12,8 @@ import com.invillia.ThunderCoin.utils.Messages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
@@ -35,19 +37,31 @@ public class UserService {
         return userRepository.save(user).getId();
     }
 
-    public void delete(Long id) {
-
-    }
-
-
+    @Transactional(readOnly = true)
     public List<User> findAll() {
         return null;
     }
 
 
-    public User findById(Long id) {
-        return null;
+    public UserResponse findByEmployeeId(Long employeeId) {
+        return userMapper.userToUserResponse(findUser(employeeId));
     }
+
+    @Transactional
+    public Long update(UserUpdateRequest userUpdateRequest, Long employeeId) {
+
+        User user = findUser(employeeId);
+
+        userMapper.updateUserByUserUpdateRequest(user,userUpdateRequest);
+
+        return userRepository.save(user).getId();
+    }
+
+    @Transactional
+    public void delete(Long id) {
+
+    }
+
 
     public void existUserWithEmployeeIdRegistred(Long id){
         if (userRepository.existsByEmployeeId(id)) {
@@ -55,16 +69,11 @@ public class UserService {
         }
     }
 
-    @Transactional
-    public Long update(UserUpdateRequest userUpdateRequest, Long employeeId) {
-
-        User user = userRepository.findByEmployeeId(employeeId)
+    @Transactional(readOnly = true)
+    private  User findUser(Long employeeId) {
+        return userRepository.findByEmployeeId(employeeId)
                 .orElseThrow(
                         () -> new UserNotFoundByEmployeeIdException(
                                 Messages.USER_NOT_FOUND_BY_EMPLOYEE_ID));
-
-        userMapper.updateUserByUserUpdateRequest(user,userUpdateRequest);
-
-        return userRepository.save(user).getId();
     }
 }
