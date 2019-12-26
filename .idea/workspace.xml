@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fc8f7eb3-9d69-4637-bc07-328aff495727" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VWPvStxuxbtGBtTiSGBxgQSdfi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThundercoinZuado/ThunderCoin" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.invillia.ThunderCoin.Application" />
+      <module name="ThunderCoin.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.invillia.ThunderCoin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc8f7eb3-9d69-4637-bc07-328aff495727" name="Default Changelist" comment="" />
+      <created>1577366107175</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577366107175</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="596" y="313" width="717" height="425" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577366195918">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state x="596" y="313" width="717" height="425" key="#com.intellij.fileTypes.FileTypeChooser/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577366195918" />
+    <state x="721" y="170" width="468" height="710" key="#com.intellij.ide.util.MemberChooser" timestamp="1577374131662">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state x="721" y="170" width="468" height="710" key="#com.intellij.ide.util.MemberChooser/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577374131662" />
+    <state x="690" y="226" width="530" height="598" key="FileChooserDialogImpl" timestamp="1577382993072">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state x="690" y="226" width="530" height="598" key="FileChooserDialogImpl/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577382993072" />
+    <state width="1864" height="243" key="GridCell.Tab.0.bottom" timestamp="1577383108925">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state width="1864" height="243" key="GridCell.Tab.0.bottom/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577383108925" />
+    <state width="1864" height="243" key="GridCell.Tab.0.center" timestamp="1577383108925">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state width="1864" height="243" key="GridCell.Tab.0.center/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577383108925" />
+    <state width="1864" height="243" key="GridCell.Tab.0.left" timestamp="1577383108924">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state width="1864" height="243" key="GridCell.Tab.0.left/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577383108924" />
+    <state width="1864" height="243" key="GridCell.Tab.0.right" timestamp="1577383108925">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state width="1864" height="243" key="GridCell.Tab.0.right/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577383108925" />
+    <state x="325" y="73" key="SettingsEditor" timestamp="1577366132737">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state x="325" y="73" key="SettingsEditor/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577366132737" />
+    <state x="540" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1577366357074">
+      <screen x="0" y="34" width="1920" height="985" />
+    </state>
+    <state x="540" y="314" key="com.intellij.ide.util.TipDialog/0.34.1920.985/1920.0.1920.1080@0.34.1920.985" timestamp="1577366357074" />
+  </component>
+</project>
