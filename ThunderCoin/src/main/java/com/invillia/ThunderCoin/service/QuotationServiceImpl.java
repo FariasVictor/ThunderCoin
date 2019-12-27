@@ -26,32 +26,43 @@ public class QuotationServiceImpl implements QuotationService {
 
     @Override
     public Long save(final QuotationRequest quotationRequest) {
-        Quotation quotation=quotationMapper.quotationRequestToQuotation(quotationRequest);
-        Long id= quotationRepository.save(quotation).getId();
+        Quotation quotation = quotationMapper.quotationRequestToQuotation(quotationRequest);
+        updateActiveQuotation();
+        Long id = quotationRepository.save(quotation).getId();
         return id;
     }
 
     @Override
     public List<QuotationResponse> findAll() {
-        List<Quotation> quotations= quotationRepository.findAll();
+        List<Quotation> quotations = quotationRepository.findAll();
         return quotationMapper.quotationToQuotationResponse(quotations);
     }
 
     @Override
     public QuotationResponse findById(final Long id) {
-        Quotation quotation= quotationRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("Quotation "));
+        Quotation quotation= quotationRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Quotation"));
         return quotationMapper.quotationToQuotationResponse(quotation);
     }
 
     @Override
     public void update(QuotationUpdateRequest quotationUpdateRequest, final Long id) {
-        Quotation quotation = quotationRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Quotation "));
+        Quotation quotation = quotationRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Quotation"));
         quotationMapper.quotationUpdateRequestToQuotation(quotationUpdateRequest, quotation);
         quotationRepository.save(quotation);
     }
 
     @Override
     public void delete(Long id) {
+        Quotation quotation = quotationRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Quotation"));
+        quotationRepository.delete(quotation);
+    }
 
+    public void updateActiveQuotation(){
+        Quotation lastQuotation = quotationRepository.findTopByOrderByIdDesc();
+        lastQuotation.setActive(false);
+        quotationRepository.save(lastQuotation);
     }
 }

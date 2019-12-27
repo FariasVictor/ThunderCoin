@@ -1,5 +1,6 @@
 package com.invillia.ThunderCoin.controller;
 
+import com.invillia.ThunderCoin.domain.Quotation;
 import com.invillia.ThunderCoin.domain.request.QuotationRequest;
 import com.invillia.ThunderCoin.domain.request.QuotationUpdateRequest;
 import com.invillia.ThunderCoin.domain.response.QuotationResponse;
@@ -35,6 +36,7 @@ public class QuotationController {
     @GetMapping("/")
     public List<QuotationResponse> findAll(){
         return quotationServiceImpl.findAll();
+//        return quotationServiceImpl.findMaxId();
     }
 
 
@@ -46,6 +48,12 @@ public class QuotationController {
     @PutMapping("/{id}")
     public HttpEntity<?> update(@Valid @RequestBody QuotationUpdateRequest quotationUpdateRequest, @PathVariable final Long id){
         quotationServiceImpl.update(quotationUpdateRequest, id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/{id}")
+    public HttpEntity<?> delete(@PathVariable final Long id){
+        quotationServiceImpl.delete(id);
         return ResponseEntity.noContent().build();
     }
 
