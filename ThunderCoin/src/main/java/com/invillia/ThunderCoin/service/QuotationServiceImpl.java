@@ -2,6 +2,7 @@ package com.invillia.ThunderCoin.service;
 
 import com.invillia.ThunderCoin.domain.Quotation;
 import com.invillia.ThunderCoin.domain.request.QuotationRequest;
+import com.invillia.ThunderCoin.domain.request.QuotationUpdateRequest;
 import com.invillia.ThunderCoin.domain.response.QuotationResponse;
 import com.invillia.ThunderCoin.exception.EntityNotFoundException;
 import com.invillia.ThunderCoin.mapper.QuotationMapper;
@@ -43,8 +44,10 @@ public class QuotationServiceImpl implements QuotationService {
     }
 
     @Override
-    public void update(QuotationRequest quotationRequest, Long id) {
-
+    public void update(QuotationUpdateRequest quotationUpdateRequest, final Long id) {
+        Quotation quotation = quotationRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Quotation "));
+        quotationMapper.quotationUpdateRequestToQuotation(quotationUpdateRequest, quotation);
+        quotationRepository.save(quotation);
     }
 
     @Override

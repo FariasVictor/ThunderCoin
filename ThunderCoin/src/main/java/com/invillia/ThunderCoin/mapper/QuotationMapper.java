@@ -2,6 +2,7 @@ package com.invillia.ThunderCoin.mapper;
 
 import com.invillia.ThunderCoin.domain.Quotation;
 import com.invillia.ThunderCoin.domain.request.QuotationRequest;
+import com.invillia.ThunderCoin.domain.request.QuotationUpdateRequest;
 import com.invillia.ThunderCoin.domain.response.QuotationResponse;
 import org.springframework.stereotype.Component;
 
@@ -34,5 +35,9 @@ public class QuotationMapper {
         quotationResponse.setCreatedAt(quotation.getCreatedAt());
 
         return quotationResponse;
+    }
+
+    public void quotationUpdateRequestToQuotation(QuotationUpdateRequest quotationUpdateRequest, Quotation quotation) {
+        quotation.setValue(quotationUpdateRequest.getValue());
     }
 }

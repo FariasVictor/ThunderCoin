@@ -1,6 +1,7 @@
 package com.invillia.ThunderCoin.controller;
 
 import com.invillia.ThunderCoin.domain.request.QuotationRequest;
+import com.invillia.ThunderCoin.domain.request.QuotationUpdateRequest;
 import com.invillia.ThunderCoin.domain.response.QuotationResponse;
 import com.invillia.ThunderCoin.service.QuotationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,12 @@ public class QuotationController {
     @GetMapping("/{id}")
     public QuotationResponse findById(@PathVariable Long id){
         return quotationServiceImpl.findById(id);
+    }
+
+    @PutMapping("/{id}")
+    public HttpEntity<?> update(@Valid @RequestBody QuotationUpdateRequest quotationUpdateRequest, @PathVariable final Long id){
+        quotationServiceImpl.update(quotationUpdateRequest, id);
+        return ResponseEntity.noContent().build();
     }
 
 }
